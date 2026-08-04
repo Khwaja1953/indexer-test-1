@@ -170,7 +170,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   rel="noopener"
                   target="_blank"
                 >
-                  High Quality Dofollow Backlinks DA 50 PA 40
+                  High Quality Do follow Backlinks DA 50 PA 40
                 </a>
               </div>
             ) : null}
