@@ -1,7 +1,7 @@
 import { productProxies } from "@/lib/product-proxies";
 import { proxyProductHead, proxyProductRequest } from "@/lib/proxy-product";
 
-const targetUrl = productProxies["pocket-power-bank"];
+const targetUrl = productProxies["everyday-bottle"];
 
 export const dynamic = "force-dynamic";
 
