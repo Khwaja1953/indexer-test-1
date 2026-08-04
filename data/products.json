@@ -76,5 +76,18 @@
     "description": "Turn the dial and begin. The Desk Timer shows remaining time at a glance and ends with a gentle chime, making it easier to work in deliberate intervals without opening an app.",
     "features": ["60-minute mechanical movement", "Silent operation", "Clear visual countdown", "Adjustable chime volume"],
     "updatedAt": "2026-08-02"
+  },
+    {
+    "slug": "demo",
+    "name": "demo",
+    "category": "Focus tools",
+    "symbol": "◷",
+    "tone": "lemon",
+    "image": "/products/desk-timer.svg",
+    "price": 1599,
+    "shortDescription": "A simple visual timer for focused work without another screen.",
+    "description": "Turn the dial and begin. The Desk Timer shows remaining time at a glance and ends with a gentle chime, making it easier to work in deliberate intervals without opening an app.",
+    "features": ["60-minute mechanical movement", "Silent operation", "Clear visual countdown", "Adjustable chime volume"],
+    "updatedAt": "2026-08-02"
   }
 ]
