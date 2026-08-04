@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
 import products from "@/data/products.json";
+import { isProxiedProduct } from "@/lib/product-proxies";
 import { getSiteUrl } from "@/lib/site-url";
-import { isRedirectedProduct } from "@/lib/product-redirects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getSiteUrl();
   const indexableProducts = products.filter(
-    (product) => !isRedirectedProduct(product.slug),
+    (product) => !isProxiedProduct(product.slug),
   );
   const latestProductUpdate = products.reduce((latest, product) => {
     const updatedAt = new Date(product.updatedAt);

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import products from "@/data/products.json";
-import { isRedirectedProduct } from "@/lib/product-redirects";
+import { isProxiedProduct } from "@/lib/product-proxies";
 import { getSiteUrl } from "@/lib/site-url";
 
 const money = new Intl.NumberFormat("en-IN", {
@@ -13,7 +13,7 @@ const money = new Intl.NumberFormat("en-IN", {
 export default function Home() {
   const siteUrl = getSiteUrl();
   const indexableProducts = products.filter(
-    (product) => !isRedirectedProduct(product.slug),
+    (product) => !isProxiedProduct(product.slug),
   );
   const itemListJsonLd = {
     "@context": "https://schema.org",

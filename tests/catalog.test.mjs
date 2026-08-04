@@ -30,7 +30,7 @@ test("sitemap source maps indexable product routes", async () => {
     new URL("../app/sitemap.ts", import.meta.url),
     "utf8",
   );
-  assert.match(sitemapSource, /isRedirectedProduct/);
+  assert.match(sitemapSource, /isProxiedProduct/);
   assert.match(sitemapSource, /indexableProducts\.map/);
   assert.match(sitemapSource, /\/products\/\$\{product\.slug\}/);
 });
