@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "focus-notebook",
+    "name": "Focus Notebook",
+    "category": "Desk essentials",
+    "symbol": "▤",
+    "tone": "sage",
+    "price": 1299,
+    "shortDescription": "A lay-flat notebook designed to keep plans clear and ideas close.",
+    "description": "The Focus Notebook gives daily thinking a calm, useful home. Its thread-sewn binding opens completely flat, while softly ruled pages leave enough structure for plans without getting in the way of sketches and ideas.",
+    "features": ["192 responsibly sourced pages", "Lay-flat thread-sewn binding", "Subtle dot-and-line page system", "Elastic closure and ribbon marker"],
+    "updatedAt": "2026-08-01"
+  },
+  {
+    "slug": "everyday-bottle",
+    "name": "Everyday Bottle",
+    "category": "On the go",
+    "symbol": "♙",
+    "tone": "clay",
+    "price": 1899,
+    "shortDescription": "Double-wall steel that keeps drinks cold without adding bulk.",
+    "description": "A slim, balanced bottle for commutes and long desk sessions. The powder-coated exterior stays easy to grip, while the wide mouth makes refilling, adding ice, and cleaning straightforward.",
+    "features": ["600 ml capacity", "18/8 stainless steel", "Leak-resistant threaded cap", "BPA-free components"],
+    "updatedAt": "2026-07-28"
+  },
+  {
+    "slug": "pocket-power-bank",
+    "name": "Pocket Power Bank",
+    "category": "Useful technology",
+    "symbol": "▣",
+    "tone": "sky",
+    "price": 2499,
+    "shortDescription": "Reliable backup power in a compact, travel-friendly form.",
+    "description": "Small enough for a jacket pocket and capable enough for a full day away from a socket. The Pocket Power Bank charges phones, earbuds, and other essentials through a fast USB-C connection.",
+    "features": ["10,000 mAh capacity", "20W USB-C power delivery", "Pass-through charging", "Four-stage battery indicator"],
+    "updatedAt": "2026-07-30"
+  },
+  {
+    "slug": "canvas-carryall",
+    "name": "Canvas Carryall",
+    "category": "Bags & storage",
+    "symbol": "▱",
+    "tone": "sand",
+    "price": 2199,
+    "shortDescription": "A structured daily tote with room for work, groceries, and detours.",
+    "description": "The Canvas Carryall is built for days that do not follow one plan. A reinforced base keeps it upright, two interior pockets separate small items, and long handles sit comfortably over the shoulder.",
+    "features": ["Heavyweight cotton canvas", "Reinforced double-layer base", "Two internal organizer pockets", "Comfortable 28 cm handle drop"],
+    "updatedAt": "2026-07-25"
+  },
+  {
+    "slug": "soft-light-lamp",
+    "name": "Soft Light Lamp",
+    "category": "Home & desk",
+    "symbol": "◉",
+    "tone": "plum",
+    "price": 3499,
+    "shortDescription": "Warm, adjustable light for reading, working, and winding down.",
+    "description": "Soft Light creates a focused pool of warm illumination without glare. Its tactile dial moves smoothly from a quiet evening glow to a brighter setting suited to detailed work.",
+    "features": ["Warm 2700K LED light", "Stepless rotary dimmer", "Weighted non-slip base", "Low-energy replaceable light source"],
+    "updatedAt": "2026-07-29"
+  },
+  {
+    "slug": "desk-timer",
+    "name": "Desk Timer",
+    "category": "Focus tools",
+    "symbol": "◷",
+    "tone": "lemon",
+    "price": 1599,
+    "shortDescription": "A simple visual timer for focused work without another screen.",
+    "description": "Turn the dial and begin. The Desk Timer shows remaining time at a glance and ends with a gentle chime, making it easier to work in deliberate intervals without opening an app.",
+    "features": ["60-minute mechanical movement", "Silent operation", "Clear visual countdown", "Adjustable chime volume"],
+    "updatedAt": "2026-08-02"
+  }
+]
