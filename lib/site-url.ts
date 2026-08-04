@@ -1,4 +1,4 @@
 export function getSiteUrl() {
-  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://dgcircle.com";
   return configuredUrl.replace(/\/$/, "");
 }
