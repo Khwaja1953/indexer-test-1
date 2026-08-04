@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import products from "@/data/products.json";
+import { isProxiedProduct } from "@/lib/product-proxies";
 import { getSiteUrl } from "@/lib/site-url";
 
 type ProductPageProps = { params: Promise<{ slug: string }> };
@@ -14,11 +15,14 @@ const money = new Intl.NumberFormat("en-IN", {
 });
 
 export function generateStaticParams() {
-  return products.map((product) => ({ slug: product.slug }));
+  return products
+    .filter((product) => !isProxiedProduct(product.slug))
+    .map((product) => ({ slug: product.slug }));
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
+  if (isProxiedProduct(slug)) notFound();
   const product = products.find((item) => item.slug === slug);
   if (!product) return {};
   const siteUrl = getSiteUrl();
@@ -55,6 +59,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params;
+  if (isProxiedProduct(slug)) notFound();
   const product = products.find((item) => item.slug === slug);
   if (!product) notFound();
   const siteUrl = getSiteUrl();

@@ -34,3 +34,12 @@ test("sitemap source maps indexable product routes", async () => {
   assert.match(sitemapSource, /indexableProducts\.map/);
   assert.match(sitemapSource, /\/products\/\$\{product\.slug\}/);
 });
+
+test("product pages exclude proxied routes from static params", async () => {
+  const productPageSource = await readFile(
+    new URL("../app/products/[slug]/page.tsx", import.meta.url),
+    "utf8",
+  );
+  assert.match(productPageSource, /isProxiedProduct/);
+  assert.match(productPageSource, /generateStaticParams/);
+});
