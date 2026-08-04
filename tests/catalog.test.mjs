@@ -43,3 +43,16 @@ test("product pages exclude proxied routes from static params", async () => {
   assert.match(productPageSource, /isProxiedProduct/);
   assert.match(productPageSource, /generateStaticParams/);
 });
+
+test("focus notebook has a dedicated sitemap with related links", async () => {
+  const sitemapSource = await readFile(
+    new URL(
+      "../app/products/focus-notebook/sitemap.xml/route.ts",
+      import.meta.url,
+    ),
+    "utf8",
+  );
+  assert.match(sitemapSource, /focus-notebook/);
+  assert.match(sitemapSource, /product\.image/);
+  assert.match(sitemapSource, /focusNotebookExternalUrl/);
+});

@@ -3,6 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import products from "@/data/products.json";
+import {
+  focusNotebookExternalUrl,
+  focusNotebookSitemapPath,
+} from "@/lib/focus-notebook-links";
 import { isProxiedProduct } from "@/lib/product-proxies";
 import { getSiteUrl } from "@/lib/site-url";
 
@@ -65,6 +69,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const siteUrl = getSiteUrl();
   const productUrl = `${siteUrl}/products/${product.slug}`;
   const productImageUrl = `${siteUrl}${product.image}`;
+  const focusNotebookLinks =
+    product.slug === "focus-notebook"
+      ? {
+          externalUrl: focusNotebookExternalUrl,
+          sitemapUrl: `${siteUrl}${focusNotebookSitemapPath}`,
+        }
+      : null;
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -85,6 +96,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
       availability: "https://schema.org/InStock",
       url: productUrl,
     },
+    ...(focusNotebookLinks
+      ? { sameAs: [focusNotebookLinks.externalUrl, focusNotebookLinks.sitemapUrl] }
+      : {}),
   };
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -148,6 +162,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <p className="detail-note">
               Demo catalog content — replace this product data with your database or API later.
             </p>
+            {focusNotebookLinks ? (
+              <div className="detail-links" aria-label="Focus Notebook links">
+                <Link href={focusNotebookSitemapPath}>Focus Notebook XML</Link>
+                <a href={focusNotebookExternalUrl}>Docker fundamentals</a>
+              </div>
+            ) : null}
           </div>
         </div>
       </article>
