@@ -165,7 +165,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
             {focusNotebookLinks ? (
               <div className="detail-links" aria-label="Focus Notebook links">
                 <Link href={focusNotebookSitemapPath}>Focus Notebook XML</Link>
-                <a href={focusNotebookExternalUrl}>Docker fundamentals</a>
+                <a
+                  href={focusNotebookExternalUrl}
+                  rel="noopener"
+                  target="_blank"
+                >
+                  High Quality Dofollow Backlinks DA 50 PA 40
+                </a>
               </div>
             ) : null}
           </div>
