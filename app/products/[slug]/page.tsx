@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import products from "@/data/products.json";
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   if (!product) return {};
   const siteUrl = getSiteUrl();
   const productUrl = `${siteUrl}/products/${product.slug}`;
+  const productImageUrl = `${siteUrl}${product.image}`;
 
   return {
     title: product.name,
@@ -33,11 +35,20 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
       title: product.name,
       description: product.shortDescription,
       siteName: "Field Supply",
+      images: [
+        {
+          url: productImageUrl,
+          width: 1200,
+          height: 900,
+          alt: product.name,
+        },
+      ],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: product.name,
       description: product.shortDescription,
+      images: [productImageUrl],
     },
   };
 }
@@ -48,10 +59,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
   if (!product) notFound();
   const siteUrl = getSiteUrl();
   const productUrl = `${siteUrl}/products/${product.slug}`;
+  const productImageUrl = `${siteUrl}${product.image}`;
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
+    image: [productImageUrl],
     description: product.description,
     category: product.category,
     sku: product.slug,
@@ -110,7 +123,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
         <div className="product-detail-grid">
           <div className={`product-detail-visual product-visual--${product.tone}`}>
             <span className="product-number">{product.category}</span>
-            <span className="product-icon" aria-hidden="true">{product.symbol}</span>
+            <Image
+              className="product-image"
+              src={product.image}
+              alt={product.name}
+              width="1200"
+              height="900"
+              priority
+            />
           </div>
           <div className="product-detail-copy">
             <p className="eyebrow">{product.category}</p>

@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import products from "@/data/products.json";
+import { isRedirectedProduct } from "@/lib/product-redirects";
 import { getSiteUrl } from "@/lib/site-url";
 
 const money = new Intl.NumberFormat("en-IN", {
@@ -10,11 +12,14 @@ const money = new Intl.NumberFormat("en-IN", {
 
 export default function Home() {
   const siteUrl = getSiteUrl();
+  const indexableProducts = products.filter(
+    (product) => !isRedirectedProduct(product.slug),
+  );
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Field Supply product catalog",
-    itemListElement: products.map((product, index) => ({
+    itemListElement: indexableProducts.map((product, index) => ({
       "@type": "ListItem",
       position: index + 1,
       url: `${siteUrl}/products/${product.slug}`,
@@ -99,9 +104,13 @@ export default function Home() {
                 <span className="product-number">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <span className="product-icon" aria-hidden="true">
-                  {product.symbol}
-                </span>
+                <Image
+                  className="product-image"
+                  src={product.image}
+                  alt={product.name}
+                  width="1200"
+                  height="900"
+                />
                 <span className="view-hint">View product ↗</span>
               </Link>
               <div className="product-card-copy">

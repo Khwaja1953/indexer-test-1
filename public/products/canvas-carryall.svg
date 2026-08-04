@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Canvas Carryall</title>
+  <desc id="desc">A structured sand colored canvas tote bag with long handles.</desc>
+  <rect width="1200" height="900" fill="#ded1b5"/>
+  <path d="M390 314c18-130 402-130 420 0" fill="none" stroke="#132c27" stroke-width="34" stroke-linecap="round"/>
+  <path d="M320 292h560l-58 468H378z" fill="#fffdf8" stroke="#132c27" stroke-width="18" stroke-linejoin="round"/>
+  <path d="M444 292l28 468M756 292l-28 468" stroke="#5d6d68" stroke-width="14"/>
+  <path d="M480 602h240" stroke="#ec6a3a" stroke-width="24" stroke-linecap="round"/>
+</svg>

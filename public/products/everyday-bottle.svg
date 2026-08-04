@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Everyday Bottle</title>
+  <desc id="desc">A clay colored insulated steel bottle with a dark cap.</desc>
+  <rect width="1200" height="900" fill="#dfb9a2"/>
+  <rect x="490" y="118" width="220" height="96" rx="28" fill="#132c27"/>
+  <rect x="430" y="194" width="340" height="598" rx="120" fill="#fffdf8" stroke="#132c27" stroke-width="18"/>
+  <rect x="478" y="286" width="244" height="318" rx="80" fill="#ec6a3a" opacity=".88"/>
+  <path d="M506 682h188" stroke="#132c27" stroke-width="18" stroke-linecap="round"/>
+  <path d="M536 365c44-32 84-32 128 0" stroke="#fffdf8" stroke-width="20" stroke-linecap="round"/>
+</svg>

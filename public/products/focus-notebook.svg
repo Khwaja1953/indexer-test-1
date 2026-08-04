@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Focus Notebook</title>
+  <desc id="desc">A green lay-flat notebook with ruled pages and an elastic band.</desc>
+  <rect width="1200" height="900" fill="#c9d7bd"/>
+  <rect x="304" y="128" width="462" height="624" rx="28" fill="#fffdf8" stroke="#132c27" stroke-width="18"/>
+  <rect x="304" y="128" width="92" height="624" rx="28" fill="#132c27"/>
+  <path d="M486 244h190M486 326h190M486 408h190M486 490h190M486 572h190" stroke="#5d6d68" stroke-width="14" stroke-linecap="round"/>
+  <path d="M798 142v596" stroke="#ec6a3a" stroke-width="28" stroke-linecap="round"/>
+  <circle cx="828" cy="450" r="38" fill="#132c27"/>
+</svg>

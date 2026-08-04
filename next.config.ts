@@ -1,16 +1,15 @@
 import type { NextConfig } from "next";
+import { productRedirects } from "./lib/product-redirects";
 
 const nextConfig: NextConfig = {
   output: "standalone",
   poweredByHeader: false,
   async redirects() {
-    return [
-      {
-        source: "/products/pocket-power-bank",
-        destination: "https://fusionlabs.space/git-github-for-devops-beginners/",
-        permanent: false,
-      },
-    ];
+    return Object.entries(productRedirects).map(([slug, destination]) => ({
+      source: `/products/${slug}`,
+      destination,
+      permanent: false,
+    }));
   },
 };
 
